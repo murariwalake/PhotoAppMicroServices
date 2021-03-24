@@ -45,7 +45,7 @@ public class UsersControl {
 		UserDTO myUserDTO = modelMapper.map(aCreateUserRequestModel, UserDTO.class);
 		UserDTO myReturnedUserDTO = userService.createUser(myUserDTO);
 		CreateUserResponseModel myCreateUserResponseModel = modelMapper.map(myReturnedUserDTO, CreateUserResponseModel.class);
-		
+
 		return ResponseEntity.status(HttpStatus.CREATED).body(myCreateUserResponseModel);
 	}
 }

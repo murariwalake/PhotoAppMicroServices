@@ -1,0 +1,10 @@
+RabbitMQ install and start
+https://www.linuxhelp.com/how-to-install-rabbitmq-in-ubuntu
+
+systemctl start rabbitmq-server
+
+http://localhost:15672
+user: admin
+pass: admin
+
+systemctl stop rabbitmq-server
