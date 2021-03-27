@@ -32,8 +32,9 @@ public class WebSecurity extends WebSecurityConfigurerAdapter{
 	protected void configure(HttpSecurity aHttpSecurity) throws Exception{
 		aHttpSecurity.csrf().disable();
 
-		aHttpSecurity.authorizeRequests().
-		antMatchers("/users/**").permitAll()
+		aHttpSecurity.authorizeRequests()
+		.antMatchers("/users/**").permitAll()
+		.antMatchers(environment.getProperty("api.actuator.url.path")).permitAll()
 		.and()
 		.addFilter(getAuthenticationFilter());
 

@@ -34,7 +34,8 @@ public class UsersControl {
 
 	@GetMapping("/status/check")
 	public String status() {
-		return " is running on port: "+ environment.getProperty("local.server.port");
+		return " is running on port: "+ environment.getProperty("local.server.port")+
+				"\nsecrete token: "+environment.getProperty("token.secret");
 	}
 
 	@PostMapping 
