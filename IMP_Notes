@@ -8,3 +8,10 @@ user: admin
 pass: admin
 
 systemctl stop rabbitmq-server
+
+How to install mysql on ubuntu
+https://www.youtube.com/watch?v=uqaoGTnxqNw
+
+start mysql
+sudo mysql -u root -p
+enter system password
